@@ -12,7 +12,7 @@ source:
   folder: src
 
 build:
-  number: 0
+  number: 1
   ignore_run_exports_from:
     - vc14_runtime   # [win]
     - ucrt   # [win]
@@ -22,13 +22,11 @@ requirements:
     - cmake
     - make
     - m2w64-gcc-fortran  # [win]
-    - m2w64-gcc-libgfortran  # [win]
     - m2w64-gcc-libs-core  # [win]
-    - {{ compiler('fortran') }}  # [not win]
+    - {{ compiler("fortran") }}
     - {{ stdlib('c') }}
 
   run:
-    - m2w64-gcc-libgfortran  # [win]
     - m2w64-gcc-libs-core  # [win]
 
 test:
