@@ -26,6 +26,7 @@ cmake ^
     -S %SRCDIR% ^
     -DCMAKE_INSTALL_LIBDIR=lib ^
     -DCMAKE_BUILD_TYPE=Release ^
+    -G "NMake Makefiles" ^
     %CMAKE_ARGS%
 
 cmake --build . --config Release
