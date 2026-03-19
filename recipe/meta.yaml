@@ -30,8 +30,8 @@ requirements:
   run:
     - m2w64-gcc-libgfortran  # [win]
     - m2w64-gcc-libs-core  # [win]
-    - libgcc  # [osx_64]
-    - libgfortran  # [osx_64]
+    - libgcc  # [osx and x86_64]
+    - libgfortran  # [osx and x86_64]
 
 test:
   commands:
