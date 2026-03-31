@@ -1,0 +1,23 @@
+diff --git a/cif2hkl.F90 b/cif2hkl.F90
+index 064dc1f..cb35ab4 100755
+--- a/cif2hkl.F90
++++ b/cif2hkl.F90
+@@ -557,8 +557,16 @@ subroutine CFML_cif2hkl(file_in, file_out, lambda, powxtal, verbose, message, mo
+     message = ""
+ 
+     ! get current date/time
+-    call idate(today)   ! today(1)=day, (2)=month, (3)=year
+-    call itime(now)     ! now(1)=hour, (2)=minute, (3)=second
++    block
++      integer :: dt_values(8)
++      call date_and_time(values=dt_values)
++      today(1) = dt_values(3)  ! day
++      today(2) = dt_values(2)  ! month
++      today(3) = dt_values(1)  ! year
++      now(1) = dt_values(5)    ! hour
++      now(2) = dt_values(6)    ! minute
++      now(3) = dt_values(7)    ! second
++    end block
+     
+     !Write reflection file
+     open( unit=lun,file=file_out,status="replace",action="write")

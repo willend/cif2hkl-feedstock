@@ -12,6 +12,7 @@ source:
   folder: src
   patches:
     - fix-aniso-lugar-bounds.patch  # upstream bug: aniso_lugar declared dimension(7) but accessed at index 8
+    - fix-idate-itime-flang.patch  # replace GNU idate/itime extensions with standard date_and_time
 
 build:
   number: 2
