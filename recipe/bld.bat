@@ -21,6 +21,8 @@ set BLDDIR=%CD%\build_cif2hkl
 
 cd %BLDDIR%
 
+set FFLAGS=%FFLAGS% -std=legacy
+
 cmake ^
     -DCMAKE_INSTALL_PREFIX=%PREFIX% ^
     -S %SRCDIR% ^
