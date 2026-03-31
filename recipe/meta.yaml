@@ -10,6 +10,8 @@ source:
   url: https://gitlab.com/soleil-data-treatment/soleil-software-projects/cif2hkl/-/archive/v{{ version }}/cif2hkl-v{{ version }}.tar.gz
   sha256: {{ sha_value }}
   folder: src
+  patches:
+    - fix-aniso-lugar-bounds.patch  # upstream bug: aniso_lugar declared dimension(7) but accessed at index 8
 
 build:
   number: 2

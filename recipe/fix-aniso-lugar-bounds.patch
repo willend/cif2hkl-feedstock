@@ -1,0 +1,11 @@
+--- a/CFML/CFML_IO_Formats.f90
++++ b/CFML/CFML_IO_Formats.f90
+@@ -4231,7 +4231,7 @@
+        integer                                :: npos, ipos, nmod
+        character(len=132)                     :: aline
+        integer,          dimension(3)         :: irrep_modulation
+-       integer,          dimension(7)         :: irrep_pos, aniso_lugar
++       integer,          dimension(8)         :: irrep_pos, aniso_lugar
+        real(kind=cp),    dimension(3,2)       :: range_atom
+        real(kind=cp),    dimension(3,12)      :: magph
+        real(kind=cp),    dimension(12)        :: mcoeff
