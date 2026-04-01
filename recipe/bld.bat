@@ -26,7 +26,7 @@ cmake ^
     -S %SRCDIR% ^
     -DCMAKE_INSTALL_LIBDIR=lib ^
     -DCMAKE_BUILD_TYPE=Release ^
-    -G "Unix Makefiles" ^
+    -G "Ninja" ^
     %CMAKE_ARGS%
 
 cmake --build . --config Release

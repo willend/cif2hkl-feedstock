@@ -1,0 +1,11 @@
+--- a/CFML/CFML_IO_Formats.f90
++++ b/CFML/CFML_IO_Formats.f90
+@@ -4231,7 +4231,7 @@
+                   ncar,mult,nitems,iv, num_irreps, nitems_irreps, num_rsym, num_centering,det,kfin,     &
+                   nitems_ani, num_ani
+        integer,          dimension(20)     :: lugar,mlugar
+-       integer,          dimension(7)      :: irrep_pos, aniso_lugar
++       integer,          dimension(8)      :: irrep_pos, aniso_lugar
+        integer,          dimension(5)      :: pos
+        integer,          dimension(3,3)    :: Rot
+        real(kind=cp),    dimension(6)      :: vet1,vet2
