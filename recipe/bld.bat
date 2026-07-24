@@ -27,7 +27,8 @@ cmake ^
     -DCMAKE_INSTALL_LIBDIR=lib ^
     -DCMAKE_BUILD_TYPE=Release ^
     -G "Ninja" ^
-    %CMAKE_ARGS%
+    %CMAKE_ARGS% ^
+    -DCMAKE_EXE_LINKER_FLAGS="-Xlinker /STACK:536870912"
 
 cmake --build . --config Release
 cmake --build . --target install --config Release
